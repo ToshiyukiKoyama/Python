@@ -1,0 +1,23 @@
+#import Pandas
+Import Pandas as py
+
+#create a dataframe
+df = pd.DataFrame({
+  'name':['Tim','John', 'Jake', 'Luke'],
+   'age': [41, 11, 19, 32],
+   'nationality': ['CAD', 'CAD', 'CAD', 'CHN']
+})
+   
+df
+
+#create a dictionary that contains the mapping values
+nationality_map = {
+  'CAN':'Canada',
+  'USA':'United State of America',
+  'CHN':'China'
+}
+
+#use map method to map values to a column
+df[‘nationality’] = df[‘nationality’].map(nationality_map)
+
+df
